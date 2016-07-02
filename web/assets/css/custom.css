@@ -1,0 +1,14 @@
+/* Put your custom css here */
+#mainHeader {
+    background-color: #fefefe;
+    border-bottom: 1px solid rgba(0,0,0,0.075);
+    box-shadow: 0 0 0px rgba(0,0,0,0);
+}
+#mainHeader > .container {
+    width: 1190px;
+}
+#footerRights {
+    background-color: #fff;
+    color: #999;
+    border-top: 0px solid #ccc;
+}

@@ -1,0 +1,16 @@
+{% extends 'todo/base.html.twig' %}
+
+{% block body %}
+    <!-- content -->
+    <main id="content">
+        <div class="container mt30 pb30">
+            <div class="bs-docs-section">
+                <h2 id="tables-example">Add a To Do List</h2>
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </main>
+    <!-- content -->
+{% endblock %}

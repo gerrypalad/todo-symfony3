@@ -1,0 +1,45 @@
+{% extends 'todo/base.html.twig' %}
+
+{% block body %}
+<!-- content -->
+<main id="content">
+    <div class="container mt30 pb30">
+        <div class="bs-docs-section">
+            <h2 id="tables-example">To Do List</h2>
+            <div class="bs-example">
+                <table class="table">
+
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>ToDo</th>
+                        <th>Due Date</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    {% for todo in todos %}
+                        <tr>
+                            <td>{{ todo.id }}</td>
+                            <td>{{ todo.name }}</td>
+                            <td>{{ todo.dueDate | date('F j, Y, g:i a') }}</td>
+                            <td>
+                                <a href="todo/details/{{ todo.id }}" class="btn btn-default btn-sm">View</a>
+                                <a href="todo/edit/{{ todo.id }}" class="btn btn-success btn-sm">Edit</a>
+                                <a href="todo/delete/{{ todo.id }}" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /example -->
+
+
+        </div>
+    </div>
+</main>
+<!-- content -->
+{% endblock %}

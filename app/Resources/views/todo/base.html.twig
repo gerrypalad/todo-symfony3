@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="description" content="To Do list project with Symfony 3">
+    <meta name="author" content="Gerry Palad">
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    {% block stylesheets %}
+        <!-- Bootstrap  -->
+        <link type="text/css" rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+        <!-- Custom css -->
+        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/layout.css') }}">
+        <link type="text/css" id="colors" rel="stylesheet" href="{{ asset('assets/css/colors.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
+    {% endblock %}
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+    <script src="{{ asset('assets/js/modernizr-2.6.1.min.js') }}"></script>
+
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
+    <link rel="apple-touch-icon" href="{{ asset('assets/images/apple-touch-icon-57-precomposed.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/images/apple-touch-icon-72-precomposed.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/images/apple-touch-icon-114-precomposed.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ asset('assets/images/apple-touch-icon-144-precomposed.png') }}">
+
+</head>
+<body>
+            <!-- Primary Page Layout  -->
+            <!-- globalWrapper -->
+            <div id="globalWrapper" class="localscroll">
+            <header class="navbar-fixed-top">
+            <!-- header -->
+            <div id="mainHeader" role="banner">
+            <div class="container">
+            <nav class="navbar navbar-default scrollMenu" role="navigation">
+            <div class="navbar-header">
+            <!-- responsive navigation -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo-250px.png') }}" alt="To Do List" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainMenu">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav pull-right">
+            <li class="primary"> <a href="/">Home</a></li>
+            <li class="primary"> <a href="todo/create">Add Todo</a></li>
+            <li class="sep"></li>
+            </ul>
+            <!-- End main navigation -->
+            </div>
+            </nav>
+            </div>
+            </div>
+            </header>
+            <!-- header -->
+                {% block body %}
+                {% endblock %}
+             <!-- footer -->
+            <footer>
+            <div id="footerRights">
+            <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+            <p>Copyright © 2015 <a href="http://www.almoalem.net" target="blank">Al Moalem Institute</a> / All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+    <!-- / footer -->
+    </div>
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('assets/bootstrap/js/bootstrap.js') }}"></script>
+{% endblock %}
+</body>
+</html>
